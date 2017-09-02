@@ -15,7 +15,7 @@ status() {
   echo "-----> $*"
 }
 
-node_version=$(curl --silent --get https://semver.io/node/resolve/4.8.4)
+node_version=$(curl --silent --get https://semver.io/node/resolve/4.8.3)
 
 install_node() {
   if [ -f "$BUILD_DIR/.vendor/node/bin/node" ] ; then
