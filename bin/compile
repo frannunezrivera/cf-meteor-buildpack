@@ -35,7 +35,9 @@ install_node() {
   mv $BUILD_DIR/node-v$node_version-linux-x64 $BUILD_DIR/.vendor/node
   chmod +x $BUILD_DIR/.vendor/node/bin/*
   PATH=$BUILD_DIR/.vendor/node/bin:$PATH
+  status "Install global packages"
   npm install npm@4.4.4 -g
+  npm install node-pre-gyp -g
   npm install node-gyp -g
 }
 
