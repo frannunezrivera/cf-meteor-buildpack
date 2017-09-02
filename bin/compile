@@ -15,7 +15,7 @@ status() {
   echo "-----> $*"
 }
 
-node_version=$(curl --silent --get https://semver.io/node/resolve/5.x)
+node_version=$(curl --silent --get https://semver.io/node/resolve/4.8.4)
 
 install_node() {
   if [ -f "$BUILD_DIR/.vendor/node/bin/node" ] ; then
@@ -36,7 +36,6 @@ install_node() {
   chmod +x $BUILD_DIR/.vendor/node/bin/*
   PATH=$BUILD_DIR/.vendor/node/bin:$PATH
   npm install npm@4.4.4 -g
-  npm -v
 }
 
 build() {
