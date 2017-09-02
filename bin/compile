@@ -36,6 +36,7 @@ install_node() {
   chmod +x $BUILD_DIR/.vendor/node/bin/*
   PATH=$BUILD_DIR/.vendor/node/bin:$PATH
   npm install npm@4.4.4 -g
+  npm install node-gyp -g
 }
 
 build() {
